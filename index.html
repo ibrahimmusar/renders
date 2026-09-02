@@ -1,401 +1,208 @@
 
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-    <title>MATHSD 2025</title>
-    <link href="/css/design_new.css" rel="stylesheet">
-
-  
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <link href="https://media.base44.com/images/public/69dd06636481372a29768ed9/606304dd7_logo_PAU_Challenge_UCAM.png" rel="icon" type="image/png"/>
+  <link href="https://media.base44.com/images/public/69dd06636481372a29768ed9/606304dd7_logo_PAU_Challenge_UCAM.png" rel="apple-touch-icon"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a contenidos exclusivos, sesiones en directo con expertos y creadores de contenido, técnicas de estudio, motivación y mucho más. Prepara tu examen de forma integral y consigue la nota que deseas." name="description"/>
+  <meta content="Pau Challenge" property="og:title"/>
+  <meta content="¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a contenidos exclusivos, sesiones en directo con expertos y creadores de contenido, técnicas de estudio, motivación y mucho más. Prepara tu examen de forma integral y consigue la nota que deseas." property="og:description"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <title>
+   Pau Challenge
+  </title>
+  <script crossorigin="" src="https://pau.ai.ucam.edu/assets/index-CKiIWQck.js" type="module">
+  </script>
+  <link crossorigin="" href="https://pau.ai.ucam.edu/assets/index-CcOTzTk5.css" rel="stylesheet"/>
+  <script type="module">
+   if (window.self === window.top) {
+  let lastPath = "";
+  function getPageNameFromPath(path) {
+    const segments = path.split("/").filter(Boolean);
+    return segments[0] || null;
+  }
+  function trackPageView() {
+    const path = window.location.pathname;
+    if (path === lastPath) return;
+    lastPath = path;
+    const pageName = getPageNameFromPath(path) || "home";
+    const appId = "69dd06636481372a29768ed9";
+    if (!appId) return;
+    fetch(`/api/app-logs/${appId}/log-user-in-app/${pageName}`, {
+      method: "POST",
+    }).catch(() => {});
+  }
+  const originalPushState = history.pushState.bind(history);
+  history.pushState = function (...args) {
+    originalPushState(...args);
+    trackPageView();
+  };
+  const originalReplaceState = history.replaceState.bind(history);
+  history.replaceState = function (...args) {
+    originalReplaceState(...args);
+    trackPageView();
+  };
+  window.addEventListener("popstate", trackPageView);
+  trackPageView();
+}
+  </script>
+  <meta content="https://media.base44.com/images/public/69dd06636481372a29768ed9/a2148e191_rrss-pau-2025-post.png/v1/fill/w_1200,h_630/a2148e191_rrss-pau-2025-post.png" property="og:image"/>
+  <meta content="https://pau.ai.ucam.edu" property="og:url"/>
+  <meta content="website" property="og:type"/>
+  <meta content="Pau Challenge" property="og:site_name"/>
+  <meta content="Pau Challenge" name="twitter:title"/>
+  <meta content="¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a contenidos exclusivos, sesiones en directo con expertos y creadores de contenido, técnicas de estudio, motivación y mucho más. Prepara tu examen de forma integral y consigue la nota que deseas." name="twitter:description"/>
+  <meta content="https://media.base44.com/images/public/69dd06636481372a29768ed9/a2148e191_rrss-pau-2025-post.png/v1/fill/w_1200,h_630/a2148e191_rrss-pau-2025-post.png" name="twitter:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="https://pau.ai.ucam.edu" name="twitter:url"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+  <meta content="Pau Challenge" name="apple-mobile-web-app-title"/>
+  <link href="https://pau.ai.ucam.edu" rel="canonical"/>
+  <script data-seo-source="builder" type="application/ld+json">
+   {"name": "Pau Challenge", "@context": "https://schema.org", "@type": "WebSite", "url": "https://pau.ai.ucam.edu"}
+  </script>
+  <script data-seo-source="builder" type="application/ld+json">
+   {"name": "Pau Challenge", "logo": "https://media.base44.com/images/public/69dd06636481372a29768ed9/a2148e191_rrss-pau-2025-post.png", "@context": "https://schema.org", "@type": "Organization", "url": "https://pau.ai.ucam.edu"}
+  </script>
  </head>
-  <body>
-    <div class="grid"></div>
-    
-    <div class="shapes-container">
-      <!-- Random SVG Circles and Triangles -->
-      <svg
-        class="shape"
-        width="50"
-        height="50"
-        style="top: 10%; left: 20%; animation-delay: 0s"
-      >
-        <circle
-          cx="25"
-          cy="25"
-          r="20"
-          stroke="rgba(255, 0, 0, 0.5)"
-          fill="none"
-          stroke-width="2"
-        />
-      </svg>
-      <svg
-        class="shape"
-        width="50"
-        height="50"
-        style="top: 50%; left: 60%; animation-delay: 1.5s"
-      >
-        <polygon
-          points="25,5 5,45 45,45"
-          stroke="rgba(0, 255, 0, 0.5)"
-          fill="none"
-          stroke-width="2"
-        />
-      </svg>
-      <svg
-        class="shape"
-        width="60"
-        height="60"
-        style="top: 70%; left: 30%; animation-delay: 3s"
-      >
-        <circle
-          cx="30"
-          cy="30"
-          r="25"
-          stroke="rgba(0, 0, 255, 0.5)"
-          fill="none"
-          stroke-width="2"
-        />
-      </svg>
-      <svg
-        class="shape"
-        width="50"
-        height="50"
-        style="top: 20%; left: 80%; animation-delay: 2.2s"
-      >
-        <polygon
-          points="25,5 5,45 45,45"
-          stroke="rgba(255, 255, 0, 0.5)"
-          fill="none"
-          stroke-width="2"
-        />
-      </svg>
-      <svg
-        class="shape"
-        width="50"
-        height="50"
-        style="top: 80%; left: 10%; animation-delay: 4s"
-      >
-        <circle
-          cx="25"
-          cy="25"
-          r="20"
-          stroke="rgba(255, 0, 255, 0.5)"
-          fill="none"
-          stroke-width="2"
-        />
-      </svg>
-      <div
-        style="
-          top: 50%;
-          left: 30%;
-          color: rgba(230, 230, 230, 0.5);
-          font-size: 42px;
-          animation-delay: 1s;
-        "
-        class="shape"
-      >
-        ∫
-      </div>
-      <div
-        style="
-          top: 20%;
-          left: 70%;
-          color: rgba(230, 230, 230, 0.5);
-          font-size: 42px;
-          animation-delay: 2s;
-        "
-        class="shape"
-        font
-      >
-        Σ
-      </div>
-      <div
-        style="
-          top: 55%;
-          left: 20%;
-          color: rgba(230, 230, 230, 0.5);
-          font-size: 42px;
-          animation-delay: 3s;
-        "
-        class="shape"
-        font
-      >
-        Π
-      </div>
-
-      <div
-        style="
-          top: 27%;
-          left: 17%;
-          color: rgba(230, 230, 230, 0.5);
-          font-size: 42px;
-          animation-delay: 1.7s;
-        "
-        class="shape"
-        font
-      >
-        ψ
-      </div>
-      <div
-        style="
-          top: 74%;
-          left: 82%;
-          color: rgba(230, 230, 230, 0.5);
-          font-size: 42px;
-          animation-delay: 2.2s;
-        "
-        class="shape"
-        font
-      >
-        ɑ
-      </div>
-    </div>
-
- 
-    <div class="title">
-
-
-   <div class="boxed-text-grid" style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
-  
-  <!-- Left Logo -->
-  <div>
-    <img src="images/logo/MATHSD25logo[1].png" alt="MATHSD Logo" class="index-image" style="max-width:120px; border-radius:12px;">
-  </div>
-
-  <!-- Center Text -->
-  <div class="text-section" style="text-align: center; flex: 1; padding: 0 20px;">
-  <div style="font-family: monospace; font-size: 32px; color: #fff; font-weight: bold; margin-bottom: 6px;">
-    ANRF Sponsored
-  </div>
-  <strong style="font-family: monospace; font-size: 25px; color: #fff; display: block; line-height: 1.4;">
-    International Conference on Mathematical and Computational Frontiers for Sustainable Development (MATHSD 2025)
-  </strong>
-  <div class="dates" style="margin-top: 8px; font-size: 18px; color: #fff; font-family: monospace;">
-    October 16-17, 2025, Venue: ABV-IIITM Gwalior
-  </div>
-</div>
-
-  <!-- Sponsor Right -->
-  <div style="background: rgba(0,0,0,0.4); padding: 6px 12px; border-radius: 8px; text-align: center; color: #fff; font-family: monospace; font-size: 14px;">
-    
-    <img src="/images/logo/nrf.png" alt="Sponsor Logo" 
-         style="max-width: 140px; border-radius: 10px; filter: drop-shadow(0 0 4px #ff4c4c);">
-  </div>
-
-</div>
-
-    </div>
-     </div>
- </div>
-
-    <div class="marquee-container">
-      <div class="marquee">
-        <span>
-       ⭐ Call for Papers for MATHSD 2025 is Closed, "Early Bird Registration deadline: <p style=" display:inline; color:red;">05 September 2025</p>" ⭐
-      </span>
-      </div>
-    </div>
-
-</div>
-    <button class="floating-button" id="registerButton"><a class="register-link" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfUHqCvLIIL4Tsx4HB7fyXG_xdmhzKtWZyZuFvN-1DzkZ_f9Q/viewform?usp=sharing">Register</a></button>
-
-    <div class="spacer" data-height="10rem"></div> 
-
-
-
-    
-
-    <div
-      class="boxed-desc"
-      data-fill="rgba(114, 177, 255, 0.35)"
-      data-border="3px solid rgb(114, 177, 255, 1.0)"
-    >
-
-    <div class="departmentimage">
-      <img src="images/tracks/main2.png"  alt="">
-    </div>
-      <h1>About</h1>
+ <body>
+  <div id="root">
+   <div data-seo-source="builder" id="seo-snapshot" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
+    <main>
+     <header>
+      <h1>
+       Pau Challenge
+      </h1>
       <p>
-        This conference brings together researchers, academicians, and
-        professionals in mathematics, computer science, and interdisciplinary
-        fields to address global sustainability challenges. It highlights how
-        mathematical and computational tools contribute to real-world solutions
-        aligned with the UN Sustainable Development Goals (SDGs).
+       ¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a contenidos exclusivos, sesiones en directo con expertos y creadores de contenido, técnicas de estudio, motivación y mucho más. Prepara tu examen de forma integral y consigue la nota que deseas.
       </p>
-      <p>
-        Over two days, participants will exchange ideas, present research, and
-        explore collaborations. Topics include mathematical modeling, AI,
-        machine learning, and computational techniques, with applications in
-        climate change, resource management, and public health. Discussions will
-        also cover the evolving role of traditional mathematical approaches.
-      </p>
-      <p>
-        This conference supports young researchers, offering them a platform to
-        present work, receive feedback, and connect with experts, fostering
-        innovation and advancing sustainable development.
-      </p>
-      *<a href="/conferencedetails "  style="color: rgb(224, 24, 181);" onclick="localStorage.setItem('scrollTo', 'datacard2')">Click here for Submission Guidelines</a>
-    </div>
-
-    <div class="spacer" data-height="8rem"></div>
-
-    <div id="explore_tag">EXPLORE</div>
-
-    <div class="bento">
-      <div class="brow_1">
-        <div
-          class="bento_card"
-          data-flex="1"
-          data-fill="rgb(114, 177, 255, 0.35)"
-          data-border="3px solid rgb(114, 177, 255, 1.0)"
-          data-title="ABV-IIITM "
-          data-link="/ABVIIITM"
-          data-img="svgs/institute_w.svg"
-          data-imgh="svgs/institute.svg"
-          data-desc="Knowledge is nectar"
-        >
-          <svg src=""></svg>
-        </div>
-
-        <div
-          class="bento_card"
-          data-flex="1"
-          data-fill="rgb(77, 255, 77, 0.35)"
-          data-border="3px solid rgb(77, 255, 77, 1.0)"
-          data-title="Department of Engineering Sciences"
-          data-link="/Dept.EngineeringScience"
-          data-img="svgs/dept_w.svg"
-          data-imgh="svgs/dept.svg"
-          data-desc="Science, Technology and Innovation is Our Vision"
-        ></div>
-      </div>
-
-      <div class="brow_2">
-        <div class="col_1">
-          <div class="brow_11">
-            <div
-              class="bento_card"
-              data-flex="2"
-              data-fill="rgb(255, 77, 77, 0.35)"
-              data-border="3px solid rgb(255, 77, 77, 1.0)"
-              data-title="Organizing Committee"
-              data-link="/OrganizingCommittee"
-              data-img="svgs/committee_w.svg"
-              data-imgh="svgs/committee.svg"
-              data-desc="Precision in Planning and Excellence in Execution"
-            ></div>
-
-            <div
-              class="bento_card"
-              data-flex="3"
-              data-fill="rgb(255, 255, 77, 0.35)"
-              data-border="3px solid rgb(255, 255, 77, 1.0)"
-              data-title="Conference Details"
-              data-link="/ConferenceDetails"
-              data-img="svgs/conference_w.svg"
-              data-imgh="svgs/conference.svg"
-              data-desc="Engineering the Future, One Innovation at a Time"
-            ></div>
-          </div>
-          <div class="brow_12">
-            <div
-              class="bento_card"
-              data-flex="1"
-              data-fill="rgb(255, 77, 210, 0.35)"
-              data-border="3px solid rgb(255, 77, 210, 1.0)"
-              data-title="Journals"
-              data-link="/Journal"
-              data-img="svgs/journal_w.svg"
-              data-imgh="svgs/journal.svg"
-              data-desc="Advancing Knowledge, One Paper at a Time"
-            ></div>
-
-            <div
-              class="bento_card"
-              data-flex="6"
-              data-fill="rgb(184, 77, 255, 0.35)"
-              data-border="3px solid rgb(184, 77, 255, 1.0)"
-              data-title="Accommodation"
-              data-link="/accommodation"
-              data-img="svgs/accomodation_w.svg"
-              data-imgh="svgs/accomodation.svg"
-              data-desc="Stay Comfortable, Stay Inspired"
-            ></div>
-          </div>
-        </div>
-        <div
-          class="bento_card"
-          data-flex="1"
-          data-fill="rgb(255, 184, 77, 0.35)"
-          data-border="3px solid rgb(255, 184, 77, 1.0)"
-          data-title="About Speakers"
-          data-link="/Speakers"
-          data-img="svgs/speakers_w.svg"
-          data-imgh="svgs/speakers.svg"
-          data-desc="Voices That Inspire, Ideas That Transform"
-        ></div>
-      </div>
-    </div>
-
-
-<div class="spacer" data-height="5rem"></div>
-<div>
-    <div class="image-container">
-      <div class="image-item">
-        <img src="images/collegeprof/Prof.SNsingh.png" alt="Prof. S. N. Singh" />
-        <p>Prof.Sri Niwas Singh</p>
-        <p>Patron</p>
-      </div>
-      <div class="image-item">
-        <img src="images/collegeprof/ajaykumarsir.png" alt="Ajay Kumar Sir" />
-        <p>Dr.Ajay Kumar</p>
-        <p>Organizing Chair</p>
-      </div>
-      <div class="image-item">
-        <img src="images/collegeprof/purnedu mishra.png" alt="Purnendu Mishra" />
-        <p>Dr.Purnedu Mishra</p>
-        <p>Conference Chair</p>
-      </div>
-      <div class="image-item">
-        <img src="images/collegeprof/anuweditasingh.png"/>
-        <p>Dr.Anuwedita Singh</p>
-        <p>Convener</p>
-      </div>
-    </div>
-    
-<div class="spacer" data-height="5rem"></div>
-
-<div class="image-container">
- 
-  <div class="image-item">
-    <img src="/images/collegeprof/jeevraj.png"/>
-    <p>Dr.Jeevaraj S</p>
-    <p>Convener</p>
+     </header>
+     <nav aria-label="Pages">
+      <h2>
+       Pages
+      </h2>
+      <ul>
+       <li>
+        <a href="/aviso-legal">
+         Legal
+        </a>
+        — Legal on Pau Challenge. ¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a co.
+       </li>
+       <li>
+        <a href="/verify-email">
+         Verify Email
+        </a>
+        — Verify Email on Pau Challenge. ¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a co.
+       </li>
+       <li>
+        <a href="/resources">
+         Categories
+        </a>
+        — Categories on Pau Challenge. ¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a co.
+       </li>
+       <li>
+        <a href="/content">
+         Content
+        </a>
+        — Content on Pau Challenge. ¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a co.
+       </li>
+       <li>
+        <a href="/planner">
+         Planner
+        </a>
+        — Planner on Pau Challenge. ¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a co.
+       </li>
+       <li>
+        <a href="/profile">
+         Profile
+        </a>
+        — Profile on Pau Challenge. ¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a co.
+       </li>
+       <li>
+        <a href="/admin">
+         Admin Dashboard
+        </a>
+        — admin/Admin Dashboard on Pau Challenge. ¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a co.
+       </li>
+       <li>
+        <a href="/admin/resources">
+         Admin Resources
+        </a>
+        — admin/Admin Resources on Pau Challenge. ¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a co.
+       </li>
+       <li>
+        <a href="/admin/categories">
+         Admin Categories
+        </a>
+        — admin/Admin Categories on Pau Challenge. ¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a co.
+       </li>
+       <li>
+        <a href="/admin/users">
+         Admin Users
+        </a>
+        — admin/Admin Users on Pau Challenge. ¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a co.
+       </li>
+       <li>
+        <a href="/admin/landing">
+         Admin Landing
+        </a>
+        — admin/Admin Landing on Pau Challenge. ¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a co.
+       </li>
+       <li>
+        <a href="/admin/fields">
+         Admin Fields
+        </a>
+        — admin/Admin Fields on Pau Challenge. ¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a co.
+       </li>
+       <li>
+        <a href="/admin/creators">
+         Admin Creators
+        </a>
+        — admin/Admin Creators on Pau Challenge. ¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a co.
+       </li>
+       <li>
+        <a href="/admin/weeks">
+         Admin Weeks
+        </a>
+        — admin/Admin Weeks on Pau Challenge. ¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a co.
+       </li>
+       <li>
+        <a href="/admin/promos">
+         Admin Promos
+        </a>
+        — admin/Admin Promos on Pau Challenge. ¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a co.
+       </li>
+       <li>
+        <a href="/admin/planner">
+         Admin Planner
+        </a>
+        — admin/Admin Planner on Pau Challenge. ¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a co.
+       </li>
+       <li>
+        <a href="/admin/badges">
+         Admin Badges
+        </a>
+        — admin/Admin Badges on Pau Challenge. ¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a co.
+       </li>
+       <li>
+        <a href="/admin/music">
+         Admin Music
+        </a>
+        — admin/Admin Music on Pau Challenge. ¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a co.
+       </li>
+       <li>
+        <a href="/admin/emails">
+         Admin Email Templates
+        </a>
+        — admin/Admin Email Templates on Pau Challenge. ¡Supera la Prueba de Acceso a la Universidad con UCAM PAU Challenge! Accede a co.
+       </li>
+      </ul>
+     </nav>
+    </main>
+   </div>
   </div>
-  <div class="image-item">
-    <img src="images/collegeprof/kapilkant.png"/>
-    <p>Dr.Kapil Kant</p>
-    <p>Co-Convener</p>
-  </div>
-  <div class="image-item">
-    <img src="images/collegeprof/pragyashukla.png"/>
-    <p>Dr.Pragya Shukla</p>
-    <p>Co-Convener</p>
-</div>
-<div class="image-item">
-  <img src="images/collegeprof/joydip dhar.png" alt="Joydip Dhar" />
-  <p>Prof.Joydip Dhar</p>
-  <p>Organizing  Secretary</p>
-</div>
-</div>
-<div class="viewsbox">
-<div class="view-box" >
-  
- 
-</div>
-</div>
-    <script defer src="script/script_new.js"></script>
-    <script src="script/bento.js"></script>
-  </body>
+ </body>
 </html>
